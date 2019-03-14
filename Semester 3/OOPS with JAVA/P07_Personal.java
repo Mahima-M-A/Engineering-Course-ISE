@@ -9,7 +9,7 @@ class P07_Personal
     float loan_amt[]=new float[3];
     float sal,da,hra,basic,tax;
     
-    Personal() //to initialize salary and tax
+    P07_Personal() //to initialize salary and tax
     {
         sal=0;
         tax=0;
