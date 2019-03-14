@@ -1,7 +1,7 @@
 //Program to check if it is a prime number or not
 
 import java.util.Scanner;
-class Prime
+class P01b_Prime
 {
     public static void main(String[] args)
     {
