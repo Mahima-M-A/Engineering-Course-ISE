@@ -1,7 +1,7 @@
 //Program to implement bubble sort 
 
 import java.util.Scanner;
-class BubbleSort
+class P01c_BubbleSort
 {
     public static void main(String[] args)
     {
