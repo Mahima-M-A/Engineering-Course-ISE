@@ -1,7 +1,7 @@
 //Program to perform addition,subtraction and multiplication of 2 complex numbers
 
 import java.util.Scanner;
-class Complex
+class P04_Complex
 {
     float real1,img1,real2,img2,ans_r,ans_i;
     Complex()
