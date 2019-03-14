@@ -1,7 +1,7 @@
 //Program to generate a fibonacci series of 'n' numbers using recursion
 
 import java.util.Scanner;
-class FibRec
+class P01a_FibRec
 {
     int fib(int n) //to generate fibonacci series
     {
