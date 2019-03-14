@@ -6,7 +6,7 @@ class P06_StringManipulation
     Scanner sc=new Scanner(System.in);
     public static void main(String[] args)
     {
-        StringManipulation ob=new StringManipulation();
+        P0_StringManipulation ob=new P06_StringManipulation();
         ob.extract();
         ob.frequency();
         ob.replaced();
