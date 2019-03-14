@@ -1,7 +1,7 @@
 //Program to generate a fibonacci series of 'n' numbers
 
 import java.util.Scanner;
-class Fibonacci
+class P01a_Fibonacci
 {
     public static void main(String[] args)
     {
