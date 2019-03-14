@@ -1,7 +1,7 @@
 //Program to perform operations on the strings(extraction,frequency,replacement,rearrangement,comparison,concatenation)
 
 import java.util.Scanner;
-class StringManipulation
+class P06_StringManipulation
 {
     Scanner sc=new Scanner(System.in);
     public static void main(String[] args)
