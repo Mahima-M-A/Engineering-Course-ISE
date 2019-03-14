@@ -35,7 +35,7 @@ class Mul
         }
     }
 }
-class MatMul
+class P05_MatMul
 {
     public static void main(String[] args)
     {
