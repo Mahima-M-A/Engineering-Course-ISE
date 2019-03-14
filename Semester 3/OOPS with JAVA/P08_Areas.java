@@ -51,7 +51,7 @@ class Segment extends Circle
     }
 }
 
-class Areas
+class P08_Areas
 {
     public static void main(String[] args)
     {
