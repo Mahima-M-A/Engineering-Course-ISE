@@ -1,7 +1,7 @@
 //Program to 'n' accounts with operations(Deposit, Withdraw)
 
 import java.util.Scanner;
-class Accounts
+class P02_Accounts
 {
     Scanner sc=new Scanner(System.in);
     int Accno;
