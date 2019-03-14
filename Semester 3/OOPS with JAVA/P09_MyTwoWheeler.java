@@ -48,10 +48,10 @@ final class FourWheeler extends Vehicle //cannot be inherited
     }
 }
 
-class MyTwoWheeler extends TwoWheeler
+class P09_MyTwoWheeler extends TwoWheeler
 {
     String name;
-    MyTwoWheeler()
+    P09_MyTwoWheeler()
     {
         System.out.println("My two wheeler constructor");
     }
@@ -62,7 +62,7 @@ class MyTwoWheeler extends TwoWheeler
     }
     public static void main(String[] args)
     {
-        MyTwoWheeler ob=new MyTwoWheeler(); //creating object of MyTwoWheeler class
+        P09_MyTwoWheeler ob=new P09_MyTwoWheeler(); //creating object of MyTwoWheeler class
         ob.getData();
         ob.putData();
         System.out.println("Name:"+ob.getName()); //
