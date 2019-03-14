@@ -44,7 +44,7 @@ class Stack
     }
 }
 
-class StackImplement
+class P03_StackImplement
 {
     public static void main(String[] args)
     {
