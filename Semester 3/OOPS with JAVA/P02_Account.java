@@ -1,7 +1,7 @@
 //Program to 'n' accounts with operations(Deposit, Withdraw)
 
 import java.util.Scanner;
-class P02_Accounts
+class P02_Account
 {
     Scanner sc=new Scanner(System.in);
     int Accno;
@@ -47,10 +47,10 @@ class P02_Accounts
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter number of people:");
         int n=sc.nextInt();
-        Account ob[]=new Account[n];  //creating array of objects of Account class for 'n' people
+        P02_Account ob[]=new P02_Account[n];  //creating array of objects of Account class for 'n' people
         for(int i=0;i<n;i++)
         {
-            ob[i]=new Account();
+            ob[i]=new P02_Account();
             System.out.println("Person["+(i+1)+"]:");
             ob[i].getinput();
             while(true)
