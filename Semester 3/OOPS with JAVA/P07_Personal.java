@@ -2,7 +2,7 @@
 promotion and loan(s)*/
 
 import java.util.Scanner;
-class Personal
+class P07_Personal
 {
     String name,edu;
     int age,num_loans,experience;
@@ -106,10 +106,10 @@ class Personal
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter no. of employees:");
         int n=sc.nextInt();
-        Personal[] ob=new Personal[n]; //creating an array of objects of class personal for 'n' employees
+        P07_Personal[] ob=new P07_Personal[n]; //creating an array of objects of class personal for 'n' employees
         for(int i=0;i<n;i++)
         {
-            ob[i]=new Personal();
+            ob[i]=new P07_Personal();
             System.out.println("Employee["+(i+1)+"]:");
             ob[i].details(); //getting details of each employee
             ob[i].sal_cal(); //caalculating salary of each employee
