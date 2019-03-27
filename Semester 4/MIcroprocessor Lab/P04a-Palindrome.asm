@@ -35,7 +35,7 @@ code segment
     display:
         mov ah,09h ;to print string
         int 21h
-        mov ah,07h ;to redirect char from stdin
+        mov ah,07h ;waits for the char from stdin
         int 21h
 code ends
 end start
