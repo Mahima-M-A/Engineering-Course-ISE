@@ -1,7 +1,7 @@
 assume cs:code,ds:data
 data segment
     str1 db "madam" ;string to be checked for
-    n db n-str1 ;contains size of str1
+    n dw n-str1 ;contains size of str1
     str2 db 5 dup(?) ;to copy the reverse of str2
     msg1 db "It is a Palindrome$"
     msg2 db "It is not a Palindrome$"
