@@ -30,17 +30,17 @@ again:
 loc1:
     je success ;if mid value is equal to key value
     dec al ;else decrement mid position as key value is less than mid value
-    mov dl,al ;store mid position -1 in dl
+    mov dl,al ;store (mid position-1) in dl
     mov al,cl ;copy the stored cl value in al
     jmp again
 failed:
-    lea dx,msg1 ;load the msg1 offset address in dx
+    lea dx,msg1 ;load the msg1 offset address into dx
     jmp display
 success:
     inc al ;increment the position where key is found
     add al,30h ;convert binary to ascii value
     mov pos,al
-    lea dx,msg2 ;load the msg2 offset address in dx
+    lea dx,msg2 ;load the msg2 offset address into dx
 display:
     mov ah,09h ;to print the string msg
     int 21h
