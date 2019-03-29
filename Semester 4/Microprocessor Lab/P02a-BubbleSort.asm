@@ -11,7 +11,7 @@ code segment
         dec bx  ;contains the last array element's position
     nextpass:
         mov cx,bx ;copies the last array element's position
-        mov ah,00 ;clears junk from ah
+        mov ah,00 ;set ah to 0
         lea si,arr ;loads the first array elemnt's position into si
     nextloop:
         mov al,[si] ;contains the array element pointed to by si
@@ -29,6 +29,6 @@ code segment
         jnz nextpass ;continue nextpass
     finish:
         mov ah,4ch 
-        int 21h ;exit program
+        int 21h ;to exit program
 code ends
 end start
