@@ -1,6 +1,6 @@
 assume cs:code,ds:data
 data segment
-    str1 db "madam" ;string to be checked for
+    str1 db 'madam' ;string to be checked for
     n dw n-str1 ;contains size of str1
     str2 db 5 dup(?) ;to copy the reverse of str2
     msg1 db "It is a Palindrome$"
@@ -25,7 +25,7 @@ code segment
         lea si,str1 ;points to the first char position of str1
         lea di,str2 ;points to the first char position of str2
         mov cx,n ;contains str1 size
-        cld ;to clear direction
+        cld ;to clear direction flag 
         rep cmpsb ;compare str1 and str2 char by char
         jnz failure ;jump if unequal
         lea dx,msg1 ;load msg1
