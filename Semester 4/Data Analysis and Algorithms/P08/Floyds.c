@@ -1,4 +1,4 @@
-//Program to implement Floyd's algorithm to compute the All-Pairs-Shortest-Paths
+//Program to implement Floyd's algorithm to compute the All-Pairs-Shortest-Paths of a weighted graph(entered in the form of a weighted matrix)
 
 #include<stdio.h>
 #include<stdlib.h>
