@@ -1,4 +1,4 @@
-//Program to implement Warshall's algorithm to compute the transitive closure of a directed graph
+//Program to implement Warshall's algorithm to compute the transitive closure of a directed graph(entered in the form of an adjacency matrix)
 
 #include<stdio.h>
 #include<stdlib.h>
