@@ -1,11 +1,11 @@
 //Program to find the minimum spanning tree(MST) from the given undirected graph entered as a cost matrix
 
 #include<stdio.h>
-int u,v,n,i,j,ne=1;
-int min,mincost=0,cost[20][20];
-void prims(int source)
+int cost[20][20];
+void prims(int source,int n)
 {
-    int visited[20];
+    int u,v,i,j,ne=1,min,mincost=0;
+    int visited[20]={0};
     visited[source]=1; //since source vertex is the first to be visited
     while(ne<n) //until all the vertices are visited
     {
@@ -28,6 +28,7 @@ void prims(int source)
         }
         cost[u][v]=cost[v][u]=999; //make changes to the cost matrix so that it is no more the edge with min value
     }
+    printf("Minimum cost=%d\n",mincost);
 }
 int main()
 {
@@ -45,7 +46,6 @@ int main()
         }
     printf("Enter the source node\n");
     scanf("%d",&source);
-    prims(source); //call the function
-    printf("Minimum cost=%d\n",mincost);
+    prims(source,n); //call the function
     return 0;
 }
