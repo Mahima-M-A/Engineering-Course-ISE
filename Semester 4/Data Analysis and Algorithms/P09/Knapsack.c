@@ -24,7 +24,7 @@ void knapsack(int w[],float p[],int cap,int n)
                 v[i][j]=0;
             else if(w[i]>j) //if the item's weight is greater than the knapsack's capacity
                 v[i][j]=v[i-1][j]; //retain the the previous value
-            else //else calculate the max of the previous value or sum of the present value and the value on moving w[i] steps back in theprevious row
+            else //else calculate the max of the previous value or sum of the present value and the value on moving w[i] steps back in the previous row
                 v[i][j]=max(v[i-1][j],v[i-1][j-w[i]]+p[i]); 
         }
     }
