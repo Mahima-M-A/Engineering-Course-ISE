@@ -7,6 +7,7 @@ void prims(int source,int n)
     int u,v,i,j,ne=1,min,mincost=0;
     int visited[20]={0};
     visited[source]=1; //since source vertex is the first to be visited
+    printf("The edges of the minimum spanning tree are: \n ");
     while(ne<n) //until all the vertices are visited
     {
         min=999; 
