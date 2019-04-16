@@ -55,12 +55,12 @@ int main()
         {
             scanf("%d",&cost[i][j]);
             if(cost[i][j]==0 && i!=j)
-				      cost[i][j]=999;
+		cost[i][j]=999;
         }
 
 	printf("\nEnter the starting node:");
 	scanf("%d",&source);
-	dijkstra(n,source);
+	dijkstra(n,source); //calls the function
 
 	return 0;
 }
