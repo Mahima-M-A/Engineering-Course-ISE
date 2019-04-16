@@ -46,7 +46,7 @@ void main()
         for(j=1;j<=n;j++)
         {
             scanf("%d",&cost[i][j]);
-            if(cost[i][j]==0)
+            if(cost[i][j]==0 && i!=j)
                 cost[i][j]=999;
         }
     kruskals(n); //calls the function
