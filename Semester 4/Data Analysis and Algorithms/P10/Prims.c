@@ -42,7 +42,7 @@ int main()
         for(j=1;j<=n;j++)
         {
             scanf("%d",&cost[i][j]);
-            if(cost[i][j]==0) 
+            if(cost[i][j]==0 && i!=j) 
                 cost[i][j]=999; //to enable the calculation if there is no direct edge b/w the vertices
         }
     printf("Enter the source node\n");
