@@ -29,7 +29,7 @@ void main()
     scanf("%d",&s);
     if(s>0 && s<=n) //to check if the source node is present in the graph or not
     {
-        printf("\nThe order in which the vertices were visited is:\n");
+        printf("\nThe order in which the vertices are visited:\n");
         for(i=s;i<=n;i++)
             if(!visited[i])
             {
