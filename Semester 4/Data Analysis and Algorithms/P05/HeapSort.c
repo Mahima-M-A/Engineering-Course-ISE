@@ -32,7 +32,7 @@ void heapify(int a[],int n) //to heapify the elements
 
 }
 
-void heapSort(int a[],int n) //to sort the heapified node elements in ascending order
+void heapSort(int a[],int n) //to sort the heapified node elements in ascending order by exchanging the root node with the last leaf node
 {
     int i,size=n;
     for(i=1;i<=n;i++)
@@ -40,7 +40,7 @@ void heapSort(int a[],int n) //to sort the heapified node elements in ascending 
         int temp=a[size];
         a[size]=a[1];
         a[1]=temp;
-        size-=1;
+        size-=1; //to not consider the highest value(as it has already been considered) for further heapification
         heapify(a,size);
     }
 }
