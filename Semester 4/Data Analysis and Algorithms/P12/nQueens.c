@@ -59,6 +59,7 @@ int main()
         for(j=0;j<N;j++)
             board[i][j]=0; //to initialize the board
     N_queen(N); //call the function
+    printf("\nThe solution matrix is:\n");
     for(i=0;i<N;i++)
     {
         for(j=0;j<N;j++)
