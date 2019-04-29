@@ -9,7 +9,7 @@ void dijkstra(int n,int source)
 	int dis[20],visited[20],count,min,nextnode,i,j;
 	for(i=1;i<=n;i++)
 	{
-		dis[i]=cost[source][i]; //to initialize dis[] with the respectiv distances from the source
+		dis[i]=cost[source][i]; //to initialize dis[] with the respective distances from the source
 		visited[i]=0; //initially none of the nodes are visited
 	}
 
