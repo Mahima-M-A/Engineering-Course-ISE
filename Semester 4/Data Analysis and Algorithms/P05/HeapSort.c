@@ -5,7 +5,7 @@ find its time efficiency class*/
 #include <stdlib.h>
 #include<time.h>
 
-void heapify(int a[],int n) //to heapify the elements
+void heapify(int a[],int n) //to heapify the elements(to create a max heap)
 {
     int i,k,j,v,heap;
     for(i=n/2;i>=1;i--) //to consider only the parental nodes
@@ -40,7 +40,7 @@ void heapSort(int a[],int n) //to sort the heapified node elements in ascending 
         int t=a[1];
         a[1]=a[i];
         a[i]=t;
-        size=i-1; ////so as to not consider the highest value(as it has already been considered) for further heapification
+        size=i-1; //so as to not consider the highest value(as it has already been considered) for further heapification
         heapify(a,size);
     }
 }
@@ -83,4 +83,4 @@ void main()
       12500       -     0.590000
       15000       -     0.812000
  
- The time complexity is found to be nlog n and it belongs to O(nlog n). */
+ The time complexity is found to be n and it belongs to O(n). */
