@@ -83,4 +83,4 @@ void main()
       12500       -     0.590000
       15000       -     0.812000
  
- The time complexity is found to be n and it belongs to O(n). */
+ The time complexity is found to be nlogn and it belongs to O(nlog(n)). */
