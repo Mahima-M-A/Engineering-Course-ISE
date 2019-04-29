@@ -13,7 +13,7 @@ int max(int a,int b) //to find the maximum of the two
 
 void knapsack(int w[],float p[],int cap,int n)
 {
-    float v[cap+1][n+1];
+    float v[20][20];
     int i,j,item[n];
     float profit=0;
     for(i=0;i<=n;i++)
