@@ -1,4 +1,4 @@
-//Program to imlement the 0/1 knapsack problem using dynamic programming technique(bottom up approach)
+//Program to implement the 0/1 knapsack problem using dynamic programming technique(bottom up approach)
 
 #include<stdio.h>
 #include<stdlib.h>
