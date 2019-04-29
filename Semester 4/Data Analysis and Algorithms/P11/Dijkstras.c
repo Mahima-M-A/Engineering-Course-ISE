@@ -52,11 +52,11 @@ int main()
 
 	for(i=1;i<=n;i++)
 		for(j=1;j<=n;j++)
-        {
-            scanf("%d",&cost[i][j]);
-            if(cost[i][j]==0 && i!=j)
-		cost[i][j]=999;
-        }
+		{
+		    scanf("%d",&cost[i][j]);
+		    if(cost[i][j]==0 && i!=j)
+			cost[i][j]=999;
+		}
 
 	printf("\nEnter the starting node:");
 	scanf("%d",&source);
