@@ -9,7 +9,7 @@ code segment
         mov dl,40d ;to set the column position
         int 10h 
         mov al,'X' ;to set the char to be printed
-        mov bl,8ch 
+        mov bl,8ch ;to set the char to blink and its colour to light red
         mov cl,1 ;to set the number of times the set char should print
         mov ah,09 ;to display char with attributes
         int 10h
