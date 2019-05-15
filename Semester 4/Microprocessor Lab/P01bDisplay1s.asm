@@ -4,7 +4,7 @@ data segment
   pb equ 20a1h ;address of port B
   pc equ 20a2h ;address of port C
   cr equ 20a3h ;address of control register
-  msg db "No. of 1's are: "
+  msg db "No. of 1's present are: "
   one db ?,"$" ;holds the number of 1's
 data ends
 code segment
@@ -31,8 +31,8 @@ code segment
     mov ah,09h ;to display msg
     int 21h
     mov dx,pa ;to copy address of port A
-    out dx,al ;to mov 8 bit data to port A
-    mov ah,4ch ;to exit
+    out dx,al ;to move 8 bit data to port A
+    mov ah,4ch ;to exit the program 
     int 21h
 code ends
 end start
