@@ -13,10 +13,10 @@ code segment
     mov al,80h ;code word to set the ports as outputs
     out dx,al ;to send the control word to cr
     mov cx,50d ;to set the rotation angle to 90 degrees
-    mov al,88h
-    mov dx,pa
+    mov al,88h ;to load the sequence into al
+    mov dx,pa ;to copy the address of port A
   rotate:
-    out dx,al
+    out dx,al ;to send the sequence to port A
     ror al,1 ;to rotate it in clockwise direction (rol al,1 -> is to be used to rotate in anti-clockwise direction)
     call delay ;call the procedure
     loop rotate
