@@ -19,11 +19,12 @@ code segment
     call delay ;calls a procedure
     ror al,1 ;to rotate the 8 bit data
     push ax 
-    mov ah,6h
-    mov dl,0ffh
+    ;to stop the ring counter(if any key is pressed)
+    mov ah,6h ;keyboard input
+    mov dl,0ffh ;does not wait for the input(ZF=0, if any key is pressed)
     int 21h
     pop ax
-    jz rpt
+    jz rpt ;if no key is pressed then continue looping
     mov ah,4ch ;to exit the program
     int 21h
   delay proc ;procedure to generate a delay
