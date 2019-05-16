@@ -9,7 +9,7 @@ code segment
   start:
     mov ax,data
     mov ds,ax
-    mov cr,dx
+    mov dx,cr
     mov al,82h ;control word to set port A: output, port B: input
     out dx,al ;to send control word to cr
     mov cx,100d ;to count 100 numbers
@@ -17,11 +17,12 @@ code segment
     mov al,00h ;al = 0
     
   next: ;up counting
-    out dx,al ;to move 8 bit data to pa
+    out dx,al ;to move 8 bit data to port A
     call delay ;calls delay procedure
     add al,01 ;increment al's value by 1
     daa ;decimal adjust after addition
     loop next ;loop 100 times
+    
     mov cx,99d ;to count 100 numbers
     
   next1: ;down counting
@@ -33,6 +34,7 @@ code segment
     
     mov ah,4ch ;to exit the program
     int 21h
+    
   delay proc ;procedure to generate a delay
     mov si,02fffh
     l2: mov di,0ffffh
