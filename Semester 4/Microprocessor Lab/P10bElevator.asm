@@ -17,7 +17,7 @@ code segment
     mov dx,pa
     mov al,00h ;to switch on the led corresponding to ground floor
     out dx,al
-    mov al,0f0h ;to switch off all the leds corresponding to the elevator's buttons
+    mov al,0f0h
     out dx,al
     mov dx,pb
   scan_again: ;to scan the input until any of the buttons are pressed(for the first time)
