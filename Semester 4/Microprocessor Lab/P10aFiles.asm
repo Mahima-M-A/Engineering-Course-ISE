@@ -23,7 +23,7 @@ code segment
 		mov bx,ax ;to set bx to file handle
 		mov ah,3fh ;to read the file
 		mov cx,100d ;number of char to be read
-		lea dx,buff ;buffer for read char
+		lea dx,buff ;buffer for the read characters
 		int 21h
 		mov cx,100d
 		lea si,buff
