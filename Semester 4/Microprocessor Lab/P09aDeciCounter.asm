@@ -11,6 +11,7 @@ code segment
 		mov ah,2 ;to print the msb of the 2 digit number
 		push ax
 		int 21h
+		pop ax
 		mov dl,al
 		mov ah,2 ;to print the lsb of the 2 digit number
 		int 21h
