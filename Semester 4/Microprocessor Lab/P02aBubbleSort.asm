@@ -7,7 +7,7 @@ code segment
     start:
         mov ax,data
         mov ds,ax
-        mov bl,n  ;contains array size
+        mov bx,n  ;contains array size
         dec bx  ;contains the last array element's position
     nextpass:
         mov cx,bx ;copies the last array element's position
