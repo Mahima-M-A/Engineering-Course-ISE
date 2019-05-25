@@ -36,6 +36,9 @@ code segment
 
 		mov ah,3eh ;to close the file
 		int 21h
+		lea dx,closmsg
+		mov ah,9
+		int 21h
 	finish:
 		mov ah,4ch ;to exit the program
 		int 21h
