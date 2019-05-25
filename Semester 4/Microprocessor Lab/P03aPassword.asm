@@ -49,7 +49,7 @@ code segment
 			int 21h
 			jmp again ;continue taking the i/p
 		next:
-			mov len2,bh store the length of the entered password
+			mov len2 ;bh store the length of the entered password
 		ret
 	readpwd endp
 
