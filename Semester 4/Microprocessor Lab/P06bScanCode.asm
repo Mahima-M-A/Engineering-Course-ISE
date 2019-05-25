@@ -59,21 +59,21 @@ code segment
 		cmp al,09
 		jle add_30
 		add al,07
-    add_30:
-      add al,30h
-      mov dl,al
-      mov ah,02
-      int 21h
-      mov al,bl
-      and al,0fh
-      cmp al,09
-      jle add_30_1
-      add al,07
-    add_30_1:
-      add al,30h
-      mov dl,al
-      mov ah,02
-      int 21h
+	    	add_30:
+	      		add al,30h
+	      		mov dl,al
+	      		mov ah,02
+	      		int 21h
+	     	 	mov al,bl
+	      		and al,0fh
+	      		cmp al,09
+	      		jle add_30_1
+	      		add al,07
+	    	add_30_1:
+	      		add al,30h
+	      		mov dl,al
+	      		mov ah,02
+	      		int 21h
 		ret
 	disp endp
 code ends
