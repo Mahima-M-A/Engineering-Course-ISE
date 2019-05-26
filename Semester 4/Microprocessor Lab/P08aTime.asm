@@ -21,7 +21,7 @@ code segment
 		mov ah,00h
 		mov cx,4
 		shl ax,cl
-		shr ah,cl
+		shr al,cl
 		add ax,3030h ;to convert binary to ascii
 		push ax ;to preserve the ascii value
 		mov dl,ah
