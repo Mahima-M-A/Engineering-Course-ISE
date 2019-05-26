@@ -10,7 +10,7 @@ code segment
         mov bx,n  ;contains array size
         dec bx  ;contains the last array element's position
     nextpass:
-        mov cx,bx ;copies the last array element's position
+        mov cx,bx ;to loop bx times
         lea si,arr ;loads the first array elemnt's position into si
     nextloop:
         mov al,[si] ;contains the array element pointed to by si
