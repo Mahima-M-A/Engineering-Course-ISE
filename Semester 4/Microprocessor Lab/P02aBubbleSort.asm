@@ -1,7 +1,7 @@
 assume cs:code,ds:data
 data segment
     arr db 10h,2h,35h,4h,3h ;unsorted array
-    n db n-arr ;contains array size
+    n dw n-arr ;contains array size
 data ends
 code segment
     start:
