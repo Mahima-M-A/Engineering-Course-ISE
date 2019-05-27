@@ -52,7 +52,7 @@ code segment
     out dx,al
     call delay
     dec al
-    cmp al,00h ;to check if it has reched the ground floor
+    cmp al,00h ;to check if it has reached the ground floor
     jge come_down ;continue looping if it hasn't
     
     mov ah,4ch ;to exit the program
