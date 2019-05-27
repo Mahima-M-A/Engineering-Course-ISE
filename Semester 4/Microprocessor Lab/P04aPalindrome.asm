@@ -26,7 +26,7 @@ code segment
         lea di,str2 ;points to the first char position of str2
         mov cx,n ;contains str1 size
         cld ;to clear direction flag 
-        rep cmpsb ;compare str1 and str2 char by char
+        rep cmpsb ;compare str1 and str2 char by char(byte by byte)
         jnz failure ;jump if unequal
         lea dx,msg1 ;load msg1
         jmp display ;jump to display
