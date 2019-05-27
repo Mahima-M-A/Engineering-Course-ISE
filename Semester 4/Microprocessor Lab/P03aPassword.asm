@@ -63,7 +63,7 @@ code segment
 			lea di,pwd2
 			cld ;clear the direction(to enable automatic increments of si and di)
 			mov ch,0 ;ch = 0
-			rep cmpsb ;to cmp char by char
+			rep cmpsb ;to cmp char by char(byte by byte)
 			jnz mismatch ;jmp to mismatch if there is a mismatch
 			disp msg1 ;else disp the corresponding success msg
 			mov ah,4ch ;to exit the program
