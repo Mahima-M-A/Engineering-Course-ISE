@@ -1,7 +1,7 @@
 //Program to find the shortest paths to every vertex from a single source from the given weighted connected graph entered as a cost matrix
 
 #include<stdio.h>
-#include<conio.h>
+#include<stdlib.h>
 
 int cost[20][20];
 void dijkstra(int n,int source)
