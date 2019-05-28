@@ -36,7 +36,7 @@ int horspool(char p[],char t[]) //to find the pattern in the text
 void main()
 {
     char p[100],t[200];
-    printf("Enter a text:\n");
+    printf("Enter a text: ");
     gets(t);
     printf("\nEnter a pattern to be found: ");
     gets(p);
