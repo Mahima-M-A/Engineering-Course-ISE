@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html>
+<head>
+	<script>
+		function display(){
+			set("name",get("name"));
+			set("usn",get("usn"));
+			set("branch",get("branch"));
+			set("add",get("address"));
+			radVal();
+		}
+		function msg(){
+			display();
+			sgpa=get("sgpa");
+			if(!isNaN(sgpa)){
+				set("sgpa",get("sgpa"));
+				if(sgpa<=5){ set("msg","Work Hard");}
+				else if(sgpa<=7){ set("msg","Need to put more effort");}
+				else if(sgpa<9){ set("msg","Good but could improve");}
+				else if(sgpa>=9 && sgpa<=10){ set("msg","Excellent");}
+				else{ set("msg","Enter valid SGPA");}
+			}
+			else{
+				set("msg","Enter valid SGPA");
+			}
+		}
+		function get(a){
+			return document.getElementsByName(a)[0].value;
+		}
+		function set(a,b){
+			document.getElementById(a).innerHTML=b;
+		}
+		function radVal(){
+   			for (i=1; i < document.getElementsByName("sem").length; i++) {
+      		  if (document.getElementById(i).checked == true) {
+				       set("sem",document.getElementById(i).value);
+      			}
+  			}
+		}
+	</script>
+<body>
+	<h1>Student Information</h1>
+	<fieldset>
+		NAME:<br>
+		<input type="text" name="name"><br>
+		USN:<br>
+		<input type="text" name="usn"><br>
+		SEMESTER:<br>
+		<input type="radio" name="sem" id="1" value="First">First<br>
+		<input type="radio" name="sem" id="2" value="Second">Second<br>
+		<input type="radio" name="sem" id="3" value="Third">Third<br>
+		<input type="radio" name="sem" id="4" value="Fourth">Fourth<br>
+		<input type="radio" name="sem" id="5" value="Fifth">Fifth<br>
+		<input type="radio" name="sem" id="6" value="Sixth">Sixth<br>
+		<input type="radio" name="sem" id="7" value="Seventh">Seventh<br>
+		<input type="radio" name="sem" id="8" value="Eighth">Eighth<br>
+		<br>
+		BRANCH:<select name="branch" size="3">
+		<option value="cse">CSE</option>
+		<option value="ise">ISE</option>
+		<option value="ece">ECE</option>
+		<option value="me">ME</option>
+		<option value="cv">CV</option>
+		</select>
+		<br>
+		ADDRESS:
+		<textarea name="address" rows="4" cols="25"></textarea>
+		<br></p>
+		SGPA: <input type="text" name="sgpa"><br>
+		<input type="submit" value="Submit" onclick="msg()">
+	</fieldset>
+	<fieldset>
+    <legend>Details</legend>
+      NAME: <span id="name"></span><br>
+      USN: <span id="usn"></span><br>
+      SEMESTER: <span id="sem"></span><br>
+      BRANCH: <span id="branch"></span><br>
+      ADDRESS: <span id="add"></span><br>
+      SGPA: <span id="sgpa"></span><br><br>
+      <i id="msg"></i><br>
+	</fieldset>
+</body>
+</html>
