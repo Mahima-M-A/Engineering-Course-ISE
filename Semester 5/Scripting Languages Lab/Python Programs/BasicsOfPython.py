@@ -88,3 +88,59 @@ else:
     print("Negative")
   else:
     print("Zero")
+
+#Looping statements(indentation indicates the blocks of statements)
+#for-loop and lists
+list1=["abc","aa","cats","dog"]
+evenList=[]
+oddList=[]
+for str in list1:
+	if len(str)%2==0:
+		evenList.append(str)
+	else:
+		oddList.append(str)
+print("Even List: ",evenList)
+print("Odd List: ",oddList)
+
+#for-loop and dictionaries
+dic={"is20":"tom","is33":"harry","is31":"hand","is21":"finch","is50":"sam"}
+print(dic)
+
+dic["is22"]="ram"
+print("After additions: ",dic)
+
+usn=[]
+for key,value in dic.items():
+	if value[0]=='h':
+		usn.append(key)
+
+for i in usn:
+	del dic[i]
+
+print("Modified dictionary: ",dic)
+
+name=list(dic.values())
+name.sort()
+print("Sorted names: ",name)
+
+#functions
+l1=[1,3,2,4,5]
+l2=[8,7,9]
+l3=l2.copy() #to copy the list
+l4=[]
+l5=[]
+def addToList(l1,l2):
+	l4=l1+l2
+	return l4
+
+def rev(l2):
+	l2.reverse()
+	return l2
+
+def addRev(l1,l3):
+	l5=addToList(l1,rev(l3))
+	return l5
+
+print("On adding 2 lists: ",addToList(l1,l2))
+print("on reversing a list: ",rev(l2))
+print("On adding a reversed list to another list: ",addRev(l1,l3))
