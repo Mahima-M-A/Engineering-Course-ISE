@@ -1,0 +1,2 @@
+import AtomicElements
+AtomicElements.atomic()
