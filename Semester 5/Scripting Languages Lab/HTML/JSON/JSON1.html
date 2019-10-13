@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h2>Store and retrieve from local storage using JSON.</h2>
+		<table border=1>
+			<tr>
+				<th>Detective Name</th>
+				<th>Detective Address</th>
+			</tr>
+			<tr>
+				<td id="det_name"></td>
+				<td id="det_add"></td>
+			</tr>
+		</table>
+
+		<br><b>Author Name: </b>
+		<label id="author"></label><br>
+		<br><b>Workplace: </b>
+		<label id="workplace"></label><br>
+
+		<script>
+			var det={"name":"Sherlock Holmes","age":28,"Address":"221B, Baker Street"};
+			myJSON=JSON.stringify(det);
+			localStorage.setItem("testJSON",myJSON);
+			test=localStorage.getItem("testJSON");
+			obj=JSON.parse(test);
+			document.getElementById("det_name").innerHTML=obj.name;
+			document.getElementById("det_add").innerHTML=obj.Address;
+
+			var myObj={"author":"Arthur Canon Doyle","workplace":"London"};
+			myJSON=JSON.stringify(myObj);
+			localStorage.setItem("testJSON",myJSON);
+			test=localStorage.getItem("testJSON");
+			obj=JSON.parse(test);
+			document.getElementById("author").innerHTML=myObj.author;
+			document.getElementById("workplace").innerHTML=myObj.workplace;
+		</script>
+	</body>
+</html>
