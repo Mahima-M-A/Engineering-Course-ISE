@@ -1,32 +1,32 @@
 def ctof(c):
     f=(9/5)*c+32
-    history.append((str(c)+' deg C to '+str(f)+' deg F'))
+    history.append((str(c)+' deg C',str(f)+' deg F'))
     return f
 
 def ftoc(f):
     c=(f-32)*5/9
-    history.append((str(f)+' deg F to '+str(c)+' deg C'))
+    history.append((str(f)+' deg F',str(c)+' deg C'))
     return c
 
 def ctok(c):
     k=c+273.15
-    history.append((str(c)+' deg C to '+str(k)+' K'))
+    history.append((str(c)+' deg C',str(k)+' K'))
     return k
 
 def ktoc(k):
     c=k-273.15
-    history.append((str(k)+' K to '+str(c)+' deg C'))
+    history.append((str(k)+' K',str(c)+' deg C'))
     return c
 
 def ftok(f):
     k=((f-32)*5/9)+273.15
-    history.append((str(f)+' deg F to '+str(k)+' K'))
+    history.append((str(f)+' deg F',str(k)+' K'))
     return k
 
 def ktof(k):
     f=((9/5)*(k-273.15))+32
-    history.append((str(k)+' K to '+str(c)+' deg F'))
-    return c
+    history.append((str(k)+' K',str(f)+' deg F'))
+    return f
 
 history=[]
 while("true"):
