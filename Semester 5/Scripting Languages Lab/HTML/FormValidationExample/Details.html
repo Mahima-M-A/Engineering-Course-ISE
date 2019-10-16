@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="check.js"></script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Student Details:</legend>
+            Name: <input type="text" id="name" required><br>
+            USN: <input type="usn" id="usn" required><br>
+            <b>Marks Obtained: </b><br>
+            Sub1: <input type="number" id="sub1" required><br>
+            Sub2: <input type="number" id="sub2" required><br>
+            Sub3: <input type="number" id="sub3" required><br>
+            <input type="submit" value="Submit" onclick="calc()">
+        </fieldset>
+        <fieldset id="res" hidden>
+            <legend>Grades obtained</legend>
+            Sub1: <span id="res1"></span><br>
+            Sub2: <span id="res2"></span><br>
+            Sub3: <span id="res3"></span><br><br>
+            Result: <span id="res4"></span>
+        </fieldset>
+    </body>
+</html>
