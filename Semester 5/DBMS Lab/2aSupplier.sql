@@ -1,7 +1,7 @@
 create table part(
 	pno int primary key,
 	pname varchar(20),
-	colour varchar(20);
+	colour varchar(20));
 
 create table supplier(
 	sno int primary key,
