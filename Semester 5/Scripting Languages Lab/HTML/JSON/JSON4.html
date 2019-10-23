@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h4>Authors</h4>
+        <table border="1">
+            <tr>
+                <td></td>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Title</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td id="a1"></td>
+                <td id="name1"></td>
+                <td id="country1"></td>
+                <td id="title1"></td>
+                <td id="year1"></td>
+            </tr>
+            <tr>
+                <td id="a2"></td>
+                <td id="name2"></td>
+                <td id="country2"></td>
+                <td id="title2"></td>
+                <td id="year2"></td>
+            </tr>
+        </table>
+        <p id="second"></p>
+ 
+        <script>
+                var dic=[{"name":"abc","country":"India","title":"Book1","year":"2019"},
+                {"name":"def","country":"USA","title":"Book2","year":"2018"},
+                {"name":"fgh","country":"India","title":"Book3","year":"2017"},
+                {"name":"ijk","country":"China","title":"Book4","year":"2019"}];
+                var c=0,x="";
+                for(i in dic){
+                    c++;
+                    if(c<3){
+                        document.getElementById("a"+c).innerHTML="<h4>Author"+c+"</h4>";
+                        document.getElementById("name"+c).innerHTML=dic[i].name;
+                        document.getElementById("country"+c).innerHTML=dic[i].country;
+                        document.getElementById("title"+c).innerHTML=dic[i].title;
+                        document.getElementById("year"+c).innerHTML=dic[i].year;
+                    }
+                    else{
+                        x+="<h4>Author"+c+"</h4><br>Name: "+dic[i].name+"<br>Country: "+dic[i].country+"<br>Book Title: "+dic[i].title+"<br>Year of Publication: "+dic[i].year+"<br><br>";
+                    }
+                }
+                document.getElementById("second").innerHTML=x;
+            </script>
+    </body>
+</html>
