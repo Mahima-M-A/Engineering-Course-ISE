@@ -2,7 +2,7 @@
 #include<string.h>
 
 #define N strlen(g)  
-char data[30],cs[30],b[50],r[7]; 
+char data[30],cs[30],b[250],r[7]; 
 
 char g[] = "10001000000100001"; 
 int a,e,c,i ;
