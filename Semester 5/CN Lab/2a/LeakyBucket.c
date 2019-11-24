@@ -3,7 +3,7 @@
 #define MIN(x,y) (x>y)?y:x
 
 int main(){
-    int rate=10,drop=0,cap=100,x,count=0,inp[10]={0},i=0,nsec,ch;
+    int rate=10,drop=0,cap=100,x,count=0,inp[30]={0},i=0,nsec,ch;
     printf("\n Bucket size : %d",cap);
     printf("\n Output rate : %d",rate);
       
@@ -12,9 +12,13 @@ int main(){
         inp[i]=rand()%200;
         printf("\n Number of packets coming at second %d : %d",(i+1),inp[i]);
         i++;
-        printf("\n Enter 1 to continue or 0 to quit..........");
-        scanf("%d",&ch);
-    }while(ch);
+        if(i<5){
+            printf("\n Enter 1 to continue or 0 to quit..........");
+            scanf("%d",&ch);
+        }
+        else
+            printf("\n\n Summary:\n");
+    }while(ch && i<5);
     
     nsec=i;
     printf("\n   Second \t   recieved \t       sent \t   dropped \t   remaining \n");
@@ -39,4 +43,4 @@ int main(){
         printf("\t%d\t\t%d\n",drop,count);
     }
     return 0;
-}      
+}
