@@ -3,7 +3,7 @@
 int S;
 int parent(int v,int p[20]){
     if(p[v]==S)
-        return 0;
+        return S;
     printf(" %d <-",p[v]);
     return parent(p[v],p);
 }
@@ -38,8 +38,7 @@ int bf(int G[20][20], int V, int E, int edge[20][2]){
             if(i!=S){
                 printf("Vertex %d -> cost = %d\n",i,distance[i]);
                 printf("path: %d <-",i);
-                int p1=parent(i,p);
-                printf(" %d\n",S);
+                printf(" %d\n",parent(i,p));
             }
         }
     return flag;
