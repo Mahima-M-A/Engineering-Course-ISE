@@ -6,21 +6,15 @@ int main(){
     int rate=10,drop=0,cap=100,x,count=0,inp[30]={0},i=0,nsec,ch;
     printf("\n Bucket size : %d",cap);
     printf("\n Output rate : %d",rate);
-      
+    srand(time(0));
     do{
-        srand(time(0));
         inp[i]=rand()%200;
         printf("\n Number of packets coming at second %d : %d",(i+1),inp[i]);
         i++;
-        if(i<5){
-            printf("\n Enter 1 to continue or 0 to quit..........");
-            scanf("%d",&ch);
-        }
-        else
-            printf("\n\n Summary:\n");
-    }while(ch && i<5);
+    }while(i<5);
     
     nsec=i;
+    printf("\n\n Summary:\n");
     printf("\n   Second \t   recieved \t       sent \t   dropped \t   remaining \n");
     for(i=0;count || i<nsec;i++){
         printf("\t%d\t",i+1);
