@@ -5,11 +5,12 @@
 char data[30],cs[30],b[250],r[7]; 
 
 char g[] = "10001000000100001"; 
-int a,e,c,i ;
+int a,e,c;
 
 void rev(){
     int n=strlen(r)-1;
     int s=strlen(b);
+    int i;
     for(i=n;i>=0;i--){
         b[s++]=r[i];
     }
@@ -17,7 +18,7 @@ void rev(){
 
 void strtobin(){
     int n = strlen(data); 
-    int k=0;
+    int k=0,i;
   
     for (i = 0; i < n; i++) { 
         // convert each char to ASCII value 
