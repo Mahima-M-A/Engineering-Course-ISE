@@ -7,7 +7,7 @@ int parent(int v,int p[20]){
     printf(" %d <-",p[v]);
     return parent(p[v],p);
 }
-int bf(int G[20][20], int V, int E, int edge[20][2]){
+int bf(int G[20][20] , int V, int E, int edge[20][2]){
     int i,j,u,v,k,distance[20],p[20],flag=1;
     for(i=0;i<V;i++){
         distance[i] = 1000 ;
@@ -32,8 +32,8 @@ int bf(int G[20][20], int V, int E, int edge[20][2]){
         if(distance[u]+G[u][v] < distance[v])
             flag = 0 ;
     }
-    printf("\nFrom source vertex %d to:\n",S);
-    if(flag)
+    if(flag){
+        printf("\nFrom source vertex %d to:\n",S);
         for(i=0;i<V;i++){
             if(i!=S){
                 printf("Vertex %d -> cost = %d\n",i,distance[i]);
@@ -41,6 +41,7 @@ int bf(int G[20][20], int V, int E, int edge[20][2]){
                 printf(" %d\n",parent(i,p));
             }
         }
+    }
     return flag;
 }
 
