@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form Details</title>
+	</head>
+  	<body>
+		<h1> ***Login Details*** </h1>
+		<h5> {{msg}} </h5> <!-- Error Message displayed here -->
+		<!-- Form for details -->
+		<form action="{{url_for('log_in')}}" method="POST" >
+		 	USERNAME : <input name = "usn" type="text" /><br>
+		  	PASS : <input name = "pass" type="text" /><br>
+			<input name = "***Login Details***" type = "submit" />
+		</form>	
+	</body>
+</html>
