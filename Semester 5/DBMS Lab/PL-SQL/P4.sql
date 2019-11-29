@@ -12,7 +12,7 @@ begin
 	for e_row in e_cursor loop
 		insert into copy values(e_row.ssn,e_row.name,e_row.sal,e_row.deptno);
 	end loop;
-
+	commit;
 	dbms_output.put_line(chr(10)||'****Copy table****'||chr(10));
 	dbms_output.put_line('SSN  Name   Salary    DeptNo');
 	for c_row in c_cursor loop
