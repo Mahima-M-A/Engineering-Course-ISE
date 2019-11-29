@@ -1,3 +1,5 @@
+--To check if the entered number is prime or not
+
 set serveroutput on;
 
 declare
