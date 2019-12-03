@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        <h1>Student Registration</h1>
+        <span id="msg"></span>
+        <h4>{{msg1}}</h4>
+        <form action="{{url_for('index')}}" method="POST">
+            USN (Eg. 1MS02IS001): <input type="text" name="usn"><br>
+            DOB (Eg. dd/mm/yyyy): <input type="text" name="dob"><br>
+            Sub1: <input type="number" name="s1" min="0" max="100" value="0"><br>
+            Sub2: <input type="number" name="s2" min="0" max="100" value="0"><br>
+            Sub3: <input type="number" name="s3" min="0" max="100" value="0"><br><br>
+            <input type="submit" value="Submit" onclick="check()">
+        </form>
+
+        <h4>{{msg2}}</h4>
+        <script>
+            function get(a){
+                return document.getElementsByName(a)[0].value;
+            }
+            function set(a,b){
+                document.getElementById(a).innerHTML=b;
+            }
+            function check(){
+                if(get('usn').length==0 || get('dob').length==0 || get('s1')==0 || get('s2')==0 || get('s3')==0)
+                    set('msg','Please fill in all the details');
+            }
+        </script>
+    </body>
+</html>
