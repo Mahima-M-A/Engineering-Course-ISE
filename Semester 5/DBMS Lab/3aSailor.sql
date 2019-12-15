@@ -54,3 +54,12 @@ group by reserves.sid;
 
 --e)--
 select bid,bname from boat where colour='white';
+
+--Mongo DB code--
+db.boat.insert([{bid:1,bname:'moon',colour:'brown',sid:10,sname:'Ram',day:"monday"},{bid:2,bname:'bolt',colour:'white',sid:20,sname:'Sam',day:"tue"},{bid:3,pname:'pen',colour:'green',sid:30,sname:'Sam',day:"wed"} ])
+
+--a)--
+db.boat.find({sname:'Sam'}).count()
+
+--b)--
+db.boat.find({colour:'white'}).pretty()
