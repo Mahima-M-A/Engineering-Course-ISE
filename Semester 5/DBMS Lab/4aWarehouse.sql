@@ -58,3 +58,12 @@ group by shipment.wno;
 --e)--
 select wno,sum(quantity) total_qty from shipment 
 group by wno;
+
+--Mongo DB code--
+db.shipment.insert([{pno:1,pname:'nut',colour:'brown',wno:10,wname:'Ram',qty:5,date:'1-12-19'},{pno:2,pname:'bolt',colour:'brown',wno:20,wname:'Sam',qty:5,date:'3-12-19'},{pno:3,pname:'pen',colour:'green',wno:30,wname:'Tom',qty:10,date:'2-12-19'},{pno:1,pname:'nut',colour:'brown',wno:20,wname:'Sam',qty:10,date:'4-12-19'},{pno:1,pname:'nut',colour:'brown',wno:30,wname:'Tom',qty:15,date:'5-12-19'}])
+
+--a)--
+db.shipment.find({wname:'Sam'}).pretty()
+
+--b)--
+db.shipment.aggregate([{$group:{_id:'$wno',totalQty:{$sum:'$qty'}}}])
