@@ -48,3 +48,12 @@ and student.usn=borrow.usn;
 --c)--
 select usn,count(isbn) no_of_books from borrow
 group by usn;
+
+--Mongo DB code--
+db.book.insert([{isbn:12,title:'database',author:'abc',publisher:'def',usn:10,name:'Ram',date:'1-12-19'},{isbn:123,title:'OR',author:'pqr',publisher:'def',usn:11,name:'Sam',date:'2-12-19'},{isbn:12,title:'database',author:'abc',publisher:'def',usn:11,name:'Sam',date:'1-12-19'}])
+
+--a)--
+db.book.find({isbn:123},{name:1})
+
+--b)--
+db.book.find({title:'database'},{name:1})
