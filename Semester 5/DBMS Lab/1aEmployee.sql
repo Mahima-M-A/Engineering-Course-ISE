@@ -51,3 +51,13 @@ select ssn,name from employee where deptNo=10;
 select name from employee,assigned_to
 where projectNo=12
 and employee.ssn=assigned_to.ssn;
+
+--Mongo DB code--
+db.createCollection("employee")
+db.employee.insert([{ssn:1,name:'abc',deptno:'xyz',pno:5},{ssn:2,name:'def',deptno:'ghi',pno:5},{ssn:3,name:'pqr',deptno:'xyz',pno:3}])
+
+--a)--
+db.employee.find({deptno:'xyz'}).pretty()
+
+--b)--
+db.employee.find({pno:5},{name:1}).pretty()
