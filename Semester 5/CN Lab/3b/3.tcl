@@ -26,6 +26,8 @@ $ns duplex-link $n(1) $n(2) 2Mb 10ms DropTail
 $ns duplex-link $n(2) $n(3) 900kb 10ms DropTail
 
 $ns queue-limit $n(0) $n(2) 10
+$ns queue-limit $n(1) $n(2) 10
+$ns queue-limit $n(2) $n(3) 5
 
 set tcp [new Agent/TCP]
 $ns attach-agent $n(0) $tcp
