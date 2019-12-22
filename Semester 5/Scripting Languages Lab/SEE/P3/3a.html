@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Authors</title>
+    </head>
+    
+    <body>
+        <h2>Authors</h2>
+        <table border="1" id="table">
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Title</th>
+                <th>Year</th>
+            </tr>
+        </table>
+        <p id="text"></p>
+        <script>
+            window.onload=()=>{
+                var dic=[{"name":"abc","country":"India","title":"Book1","year":"2019"},
+                        {"name":"def","country":"USA","title":"Book2","year":"2018"},
+                        {"name":"fgh","country":"India","title":"Book3","year":"2017"},
+                        {"name":"ijk","country":"China","title":"Book4","year":"2019"}];
+                var c=0,x="";
+                for(i in dic){
+                    c++;
+                    if(c<=2){
+                        var row=document.createElement('tr');
+                        var name=document.createElement('td');
+                        name.innerHTML=dic[i].name;
+                        var country=document.createElement('td');
+                        country.innerHTML=dic[i].country;
+                        var title=document.createElement('td');
+                        title.innerHTML=dic[i].title;
+                        var year=document.createElement('td');
+                        year.innerHTML=dic[i].year;
+                        row.appendChild(name);
+                        row.appendChild(country);
+                        row.appendChild(title);
+                        row.appendChild(year);
+                        document.getElementById("table").appendChild(row);
+                    }
+                    else
+                        x+="Name: "+dic[i].name+"<br>Country: "+dic[i].country+"<br>Title: "+dic[i].title+"<br>Year: "+dic[i].year+"<br><br>";
+                }
+                document.getElementById("text").innerHTML=x;
+            }
+        </script>
+    </body>
+</html>

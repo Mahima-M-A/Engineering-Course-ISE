@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Store</title>
+    </head>
+    
+    <body>
+        <fieldset>
+            Enter item name: <input type="text" required><br>
+            Price: <select id="price" required>
+                <option value="100">Rs. 100</option>
+                <option value="200">Rs. 200</option>
+                <option value="300">Rs. 300</option>
+            </select><br>
+            Quantity: <input type="number" id="qty" required>
+            <input type="submit" value="Submit" onclick="calc()">
+        </fieldset>
+        <h3>Amount to be paid:  <span id="amt"></span></h3><br>
+        <input type="submit" value="Paid" id="pay" onclick="pay()" disabled>
+    </body>
+    <script>
+        function calc(){
+            document.getElementById("amt").innerHTML="Rs. "+(document.getElementById("price").value)*(document.getElementById("qty").value);
+            document.getElementById("pay").disabled=false;
+        }
+        function pay(){
+            alert(document.getElementById("amt").innerHTML+" paid successfully");
+            document.getElementById("pay").disabled=true;
+        }
+    </script>
+</html>
