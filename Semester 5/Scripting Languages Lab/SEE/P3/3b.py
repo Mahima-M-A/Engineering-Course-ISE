@@ -30,9 +30,10 @@ for i in range(10):
         print(wordTuple[0],'   length: ',len(wordTuple[0]),'    frequency: ',wordTuple[1])
     except IndexError:
         print('The file contains less than 10 words')
+        break
 
 sum=reduce(lambda x,y: x+y,wordlen)
 print('Avg of the word lengths: ',sum/len(wordlen))
 
-squares=[x**2 for x in wordlen if x%2==0]
+squares=[x**2 for x in wordlen if x%2!=0]
 print('Squares of odd word lengths: ',squares)
