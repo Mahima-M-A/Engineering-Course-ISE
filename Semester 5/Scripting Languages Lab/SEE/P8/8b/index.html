@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospitals</title>
+        <script type="text/javascript" src="script.js"></script>
+        <style>
+            table{
+                width:100%;
+                text-align: center;
+            }
+            td{
+                font-size: x-large;
+            }
+            th{
+                font-size: x-large;
+                color: white;
+                background-color:blueviolet;
+            }
+            th:hover{
+                background-color: turquoise;
+            }
+            #text{
+                color: blue;
+                text-align: center;
+                font-size: x-large;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="text-align: center;">Details</h2>
+        <table>
+            <tr id="menu"></tr>
+        </table>
+        <hr><br>
+        <p id="text">Patient details</p>
+        <table id="data-table" hidden>
+            <tr><td>Name: </td><td id="name"></td></tr>
+            <tr><td>Aadhar no.: </td><td id="aadhar"></td></tr>
+            <tr><td>Lab tests: </td><td id="tests"></td></tr>
+        </table>
+    </body>
+</html>

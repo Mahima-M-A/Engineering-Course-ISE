@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cars</title>
+        <script type="text/javascript" src="cars.js"></script>
+        <style>
+            table{
+                text-align: center;
+                width: 100%;
+            }
+            td{
+                font-size: x-large;
+            }
+            th{
+                font-size: xx-large;
+                color: white;
+                background-color: green;
+            }
+            th:hover{
+                background-color: greenyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 style="text-align: center;">Mouse Hover Example</h3>
+        <table>
+            <tr id="menu"></tr>
+        </table>
+        <hr><br>
+        <table id="data-table" hidden>
+            <tr><td>Name</td><td id="name"></td></tr>
+            <tr><td>Picture</td><td id="pic"></td></tr>
+            <tr><td>Price</td><td id="price"></td></tr>
+            <tr><td>Year</td><td id="year"></td></tr>
+        </table>
+    </body>
+</html>

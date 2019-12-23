@@ -1,0 +1,62 @@
+window.onload=()=>{
+    patient=[
+        {
+            "name":"ABC",
+            "aadhar":"123456789012",
+            "tests":['aaa','bbb'],
+            "hosp":"XXX"
+        },
+        {
+            "name":"DEF",
+            "aadhar":"18986789012",
+            "tests":['ppp','bbb'],
+            "hosp":"ZZZ"
+        },
+        {
+            "name":"AGHI",
+            "aadhar":"12344249012",
+            "tests":['aaa','ccc'],
+            "hosp":"SSS"
+        }
+    ];
+    hospital=[
+        {
+            "name":"XXX",
+            "location":"BLR"
+        },
+        {
+            "name":"ZZZ",
+            "location":"TN"
+        },
+        {
+            "name":"SSS",
+            "location":"AP"
+        }
+    ];
+    hospital.forEach((item,index) => {
+        var ele=document.createElement('th');
+        ele.id=item.name;
+        ele.innerHTML=item.name;
+        document.getElementById('menu').appendChild(ele);
+    });
+    hospital.forEach(mousehover);
+    function mousehover(items,index){
+        var ele=document.getElementById(items.name);
+        ele.onmouseover=()=>{
+            patient.forEach((item,index)=>{
+                document.getElementById('data-table').removeAttribute('hidden');
+                if(item.hosp==ele.id){
+                    if(items.name=='XXX')
+                        document.getElementById('text').style.color='red';
+                    else if(items.name=='ZZZ')
+                        document.getElementById('text').style.color='violet';
+                    else
+                        document.getElementById('text').style.color='green';
+                    document.getElementById('name').innerHTML=item.name;
+                    document.getElementById('aadhar').innerHTML=item.aadhar;
+                    document.getElementById('tests').innerHTML=item.tests;
+                }
+            });
+        }
+    }
+}

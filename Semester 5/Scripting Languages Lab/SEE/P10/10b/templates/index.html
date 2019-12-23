@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        <h2>Student Registration</h2>
+        <h3>Fill in the following details</h3>
+        <p>{{msg}}</p>
+        <form action="{{url_for('index')}}" method="POST">
+            Enter USN: <input type="text" name="usn"><br>
+            Enter DOB: <input type="text" name="dob"><br>
+            Enter marks obtained in:<br>
+            Sub1: <input type="number" name="m1" min="0" value="0"><br>
+            Sub2: <input type="number" name="m2" min="0" value="0"><br>
+            Sub3: <input type="number" name="m3" min="0" value="0"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <h3>{{total}}</h3>
+    </body>
+</html>
