@@ -56,7 +56,7 @@ and supplier.sno=supply.sno;
 db.part.insert([{pno:1,pname:'nut',colour:'brown',sno:10,sname:'Ram',address:"blr"},{pno:2,pname:'bolt',colour:'brown',sno:20,sname:'Sam',address:"blr"},{pno:3,pname:'pen',colour:'green',sno:30,sname:'Tom',address:"chn"}])
 
 --a)--
-db.part.update({pno:1},{$set:{pno:5}},multi=true)
+db.part.update({pno:1},{$set:{pno:5}},{multi:true})
 
 --b)--
 db.part.find({pno:5},{sno:1}).pretty()
