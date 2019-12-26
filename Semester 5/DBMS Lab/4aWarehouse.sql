@@ -53,6 +53,7 @@ group by wno;
 --d)--
 select count(pno) no_of_parts from shipment,warehouse
 where wname='abc'
+and shipment.wno=warehouse.wno
 group by shipment.wno;
 
 --e)--
