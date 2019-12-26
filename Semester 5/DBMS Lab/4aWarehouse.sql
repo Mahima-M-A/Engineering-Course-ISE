@@ -48,7 +48,7 @@ having count(wno)=(select count(wno) from warehouse);
 
 --c)--
 select wno,count(pno) no_of_parts from shipment
-group by pno;
+group by wno;
 
 --d)--
 select count(pno) no_of_parts from shipment,warehouse
