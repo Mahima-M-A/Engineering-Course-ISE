@@ -44,7 +44,7 @@ public class CallManager{
                         
                         if(cho==1){
                             int index=missedCalls.indexOf(m1);
-                            missedCalls.remove(index);
+                            missedCalls.remove(index); //or directly use - missedCalls.remove(m1);
                         }
                         else if(cho==2){
                             if(!it.hasNext()){
@@ -72,7 +72,7 @@ public class CallManager{
                         if(m1.phno==pno){
                             flag=true;
                             int index=missedCalls.indexOf(m1);
-                            missedCalls.remove(index);
+                            missedCalls.remove(index); //or directly use - missedCalls.remove(m1);
                             break;
                         }
                     }
