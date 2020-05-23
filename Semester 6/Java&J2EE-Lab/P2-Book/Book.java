@@ -2,12 +2,14 @@ public class Book implements Comparable<Book> {
 
     String title, author, publisher;
     Double price;
+    int id;
 
-    public Book(String t, String aut, String pub, Double pr) {
-        title = t;
-        author = aut;
-        publisher = pub;
-        price = pr;
+    public Book(int id, String title, String author, String publisher, Double price) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.publisher = publisher;
+        this.price = price;
     }
 
     Double getPrice() {
@@ -15,7 +17,7 @@ public class Book implements Comparable<Book> {
     }
 
     public String toString() {
-        return "Book Details :\n  Title: " + title + "\n  Author: " + author + "\n  Publisher: " + publisher + "\n  Price: " + price;
+        return "Book Details :\n  ID: "+ id +"\n  Title: " + title + "\n  Author: " + author + "\n  Publisher: " + publisher + "\n  Price: " + price;
     }
 
     public int compareTo(Book o) {
