@@ -16,8 +16,8 @@ import javax.swing.text.NumberFormatter;
 
 public class StudentDetails implements ActionListener{
 	JFrame f;
-	JLabel l1, l2, l3, l4, l5, l51, l52, l53, l54, l55, l56, l57, l58, l6;
-	JTextField t1, t2, t3, t4, t51, t52, t53, t54, t55, t56, t57, t58, t6;
+	JLabel l1, l2, l3, l4, l41, l5, l51, l52, l53, l54, l55, l56, l57, l58, l6;
+	JTextField t1, t2, t3, t4, t41, t51, t52, t53, t54, t55, t56, t57, t58, t6;
 	JTextArea ta1;
 	JButton b1, b2;
 	ArrayList<StudentDetailsCollection> list = new ArrayList<StudentDetailsCollection>();
@@ -28,6 +28,7 @@ public class StudentDetails implements ActionListener{
 		l2 = new JLabel("USN");
 		l3 = new JLabel("Age");
 		l4 = new JLabel("Address");
+		l41 = new JLabel("Category");
 		l5 = new JLabel("SGPA");
 		l51 = new JLabel("Semester 1");
 		l52 = new JLabel("Semester 2");
@@ -48,6 +49,7 @@ public class StudentDetails implements ActionListener{
 		t3 = new JFormattedTextField(nf);
 		t3.setColumns(10);
 		t4 = new JTextField(20);
+		t41 = new JTextField(20);
 		t6 = new JTextField(10);
 		t6.setEditable(false);
 
@@ -87,6 +89,8 @@ public class StudentDetails implements ActionListener{
 		f.add(t3);
 		f.add(l4);
 		f.add(t4);
+		f.add(l41);
+		f.add(t41);
 		f.add(l5);
 		f.add(l51);
 		f.add(t51);
@@ -124,11 +128,12 @@ public class StudentDetails implements ActionListener{
 			String name = t1.getText();
 			String usn = t2.getText();
 			String address = t4.getText();
+			String category = t41.getText();
 			
-			if(name.equals("") || usn.equals("") || address.equals("")) {
+			if(name.equals("") || usn.equals("") || address.equals("") || category.equals("")) {
 				throw new EmptyFieldException();
 			}
-			else if(!Pattern.matches("1MS[0-9][0-9]IS[0-9][0-9][0-9]", usn)) {
+			else if(!Pattern.matches("1MS[0-9][0-9][A-Z][A-Z][0-9][0-9][0-9]", usn)) {
 				throw new USNException();
 			}
 			
@@ -147,7 +152,7 @@ public class StudentDetails implements ActionListener{
 				t6.setText(String.valueOf(cgpa));
 			}
 			if(e.getSource() == b2) {
-				list.add(new StudentDetailsCollection(name, usn, age, address, s1, s2, s3, s4, s5, s6, s7, s8, cgpa));
+				list.add(new StudentDetailsCollection(name, usn, age, address, category, s1, s2, s3, s4, s5, s6, s7, s8, cgpa));
 				ta1.setText("");
 				String details = "";
 				for(StudentDetailsCollection sd : list) {
@@ -173,6 +178,7 @@ public class StudentDetails implements ActionListener{
 		t2.setText("");
 		t3.setText("");
 		t4.setText("");
+		t41.setText("");
 		t51.setText("");
 		t52.setText("");
 		t53.setText("");

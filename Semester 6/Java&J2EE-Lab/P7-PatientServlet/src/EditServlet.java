@@ -31,6 +31,7 @@ public class EditServlet extends HttpServlet {
 		out.print("<tr><td>Age:</td><td><input type='number' name='age' value='"+e.getAge()+"'/></td></tr>");
 		out.print("<tr><td>Date of Admission:</td><td><input type='date' name='date' value='"+e.getDate()+"'/></td></tr>");
 		out.print("<tr><td>Cause of Admission:</td><td><input type='text' name='cause' value='"+e.getCause()+"'/></td></tr>");
+		out.print("<tr><td>Doctor Diagnosed:</td><td><input type='text' name='doctor' value='"+e.getDoctor()+"'/></td></tr>");
 		out.print("<tr><td>Treatment proposed:</td><td><input type='text' name='treatment' value='"+e.getTreatment()+"'/></td></tr>");
 		out.print("</td></tr>");
 		out.print("<tr><td colspan='2'><input type='submit' value='Edit &amp; Save '/></td></tr>");

@@ -36,7 +36,7 @@ public class LoginPurchaseDetails {
 					public void actionPerformed(ActionEvent e) {
 						int flag = 0;
 						Set<Map.Entry<Integer, Long>> set1 = hm.entrySet();
-						for(Map.Entry<Integer, Long>set2 : set1) {
+						for(Map.Entry<Integer, Long> set2 : set1) {
 							if(Long.parseLong(tphn.getText()) == set2.getValue()) {
 								form(set2.getValue(),set2.getKey());
 								flag = 1;
