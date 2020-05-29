@@ -3,7 +3,7 @@
 
 void main() {
 	FILE *f1, *f2, *f3;
-	char label[20], opcode[20], operand[20], macroname[20];
+	char label[20], opcode[20], operand[20], macroname[20], temp[20];
 	strcpy(macroname, "");
 	f1 = fopen("macin.txt", "r");
 	f2 = fopen("macout.txt", "w");
@@ -14,9 +14,10 @@ void main() {
 			fprintf(f2, "%s\t%s\t%s\n", label, opcode, operand);
 
 		else if (strcmp(opcode, macroname) == 0) {
+			strcpy(temp, label);
 			f3 = fopen("deftab.txt", "r");
 			fscanf(f3, "%s %s %s", label, opcode, operand);
-			fprintf(f2, "%s\t%s\t%s\n", label, opcode, operand);
+			fprintf(f2, "%s\t%s\t%s\n", temp, opcode, operand);
 			fscanf(f3, "%s %s %s", label, opcode, operand);
 			while (!feof(f3)) {
 				fprintf(f2, "%s\t%s\t%s\n", label, opcode, operand);

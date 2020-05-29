@@ -3,20 +3,15 @@
 int id=0, op=0, clines=0; 
 %} 
 OPERATOR "+"|"-"|"*"|"/"
-%s COMMENT
 %%
-"//" {clines++;}
-"/*"[.]*"*/" {clines++;}
-"/*" {BEGIN COMMENT ;}
-<COMMENT>"*/" {BEGIN 0; clines++ ;}
-<COMMENT>\n {clines++ ;}
-<COMMENT>. {;}
+"//".* {clines++;}
+"/*"[^"*/"]*"*/" {clines++;}
 {OPERATOR} {op++;}
+= ;
 [ \t\n] ;
 [0-9]+[a-zA-Z0-9_]* ;
 [a-zA-Z_][a-zA-Z0-9_]* {id++; ECHO; printf("\n");}
 [!@#$^&%()}{|;.<>?:"'~`\[\]]+[a-zA-Z0-9_]* ; 
-= ;
 . ;
 %%
 
