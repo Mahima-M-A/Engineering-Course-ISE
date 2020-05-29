@@ -1,10 +1,12 @@
 %{
 #include<stdio.h>
+#include<stdlib.h>
 %}
-%token A B
-%left A B
-
+%token A B NL
+%left A B NL
 %%
+stmt: S NL {printf("\nValid Expression\n"); exit(0);}
+;
 S: A S|S B| ;
 %%
 
@@ -19,6 +21,5 @@ int main()
 {
 	printf("Enter an Expression: ");
 	yyparse();
-	printf("\nValid Expression\n");
 	return 0;
 }
