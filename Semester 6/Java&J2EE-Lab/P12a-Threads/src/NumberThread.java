@@ -2,28 +2,31 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class NumberThread implements Runnable {
-	HashMap<Integer,String> numberMap = new HashMap<>();
+	HashMap<Integer,String> hm = new HashMap<>();
 
 	public NumberThread() {
-		numberMap.put(1, "One");
-		numberMap.put(2, "Two");
-		numberMap.put(3, "Three");
-		numberMap.put(4, "Four");
-		numberMap.put(5, "Five");
-		numberMap.put(6, "Six");
-		numberMap.put(7, "Seven");
-		numberMap.put(8, "Eight");
-		numberMap.put(9, "Nine");
-		numberMap.put(0, "Zero");
+		hm.put(0, "Zero");
+		hm.put(1, "One");
+		hm.put(2, "Two");
+		hm.put(3, "Three");
+		hm.put(4, "Four");
+		hm.put(5, "Five");
+		hm.put(6, "Six");
+		hm.put(7, "Seven");
+		hm.put(8, "Eight");
+		hm.put(9, "Nine");
 	}
 	@Override
 	public void run() {
-		System.out.println("Enter a 4 digit number: ");
 		Scanner sc = new Scanner(System.in);
-		String number = sc.next();
-		for (int i = 0; i < number.length(); i++){
-			int digit = Integer.parseInt("" + number.charAt(i));
-			System.out.println(digit + ": " + numberMap.get(digit));
+		System.out.println("Enter a 4 digit number: ");
+		int n = sc.nextInt();
+		String res = "";
+		while(n>0) {
+			int r = n%10;
+			res = r + "-" + hm.get(r) + "\n" +  res;
+			n /= 10;
 		}
+		System.out.println(res);
 	}
 }

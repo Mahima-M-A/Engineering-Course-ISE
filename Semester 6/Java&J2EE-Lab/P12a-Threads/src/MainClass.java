@@ -1,4 +1,4 @@
-public class Client {
+public class MainClass {
 	public static void main(String[] args) {
 		NumberThread thread1 = new NumberThread();
 		VowelThread thread2 = new VowelThread();

@@ -6,13 +6,12 @@ import java.net.Socket;
 public class ClientSocket {
 	public static void main(String[] args) {
 		try {
-			Socket s = new Socket("localhost", 1999);
+			Socket socket = new Socket("localhost", 1500);
 			BufferedReader reader = new BufferedReader(new FileReader("hello.txt"));
-			byte []b = new byte[30]; 
-			String k = reader.readLine(); 
-			DataOutputStream dos = new DataOutputStream(s.getOutputStream()); 
-			dos.writeUTF(k); 
-            System.out.println("Transfer Complete"); 
+			String lines = reader.readLine(); 
+			DataOutputStream output = new DataOutputStream(socket.getOutputStream()); 
+			output.writeUTF(lines); 
+            System.out.println("File Transferred"); 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

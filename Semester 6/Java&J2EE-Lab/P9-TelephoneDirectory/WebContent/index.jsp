@@ -7,7 +7,7 @@
 <title>Telephone Directory</title>
 </head>
 <body>
-	<form  action="JavaConnection" method="get">
+	<form  action="Search" method="get">
 		Enter name or phone:<input type="text" name="input" /><br/>
 		<input type="submit" value="Search" />
 	</form>

@@ -3,7 +3,6 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.servlet.ServletException;
@@ -15,15 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class JavaConnection
  */
-@WebServlet("/JavaConnection")
-public class JavaConnection extends HttpServlet {
+@WebServlet("/Search")
+public class Search extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
-        boolean flag = false;
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;               
@@ -65,15 +63,8 @@ public class JavaConnection extends HttpServlet {
                 out.println("No contact found");
             } 
             
-            
-        } catch (ClassNotFoundException e) {
-            out.println("Error: failed to load MySQL driver.");
-            e.printStackTrace();
-        } catch (SQLException e) {
-            out.println("Error: failed to create a connection object.");
-            e.printStackTrace();
         } catch (Exception e) {
-            out.println("Error: unknown");
+            out.println("Error");
             e.printStackTrace();
         } 
     

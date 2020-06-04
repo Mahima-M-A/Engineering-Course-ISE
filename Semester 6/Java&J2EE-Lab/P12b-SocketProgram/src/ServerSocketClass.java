@@ -7,17 +7,16 @@ import java.net.ServerSocket;
 public class ServerSocketClass {
 	public static void main(String[] args) {
 		try { 
-	        ServerSocket ss = new ServerSocket(1999); 
-	        Socket s = ss.accept(); 
-	        DataInputStream dis = new DataInputStream(s.getInputStream()); 
-	        String k = dis.readUTF(); 
-	        System.out.println("File Transferred"); 
-	        FileOutputStream fos = new FileOutputStream("hi.txt"); 
-	        byte[] b = k.getBytes(); 
-	        fos.write(b);
+	        ServerSocket server = new ServerSocket(1500); 
+	        Socket socket = server.accept(); 
+	        DataInputStream input = new DataInputStream(socket.getInputStream()); 
+	        String data = input.readUTF(); 
+	        System.out.println("File Received"); 
+	        FileOutputStream output = new FileOutputStream("hi.txt"); 
+	        output.write(data.getBytes());
 	        
-	       } catch (IOException ie) { 
-	         ie.printStackTrace(); 
+	       } catch (IOException e) { 
+	         e.printStackTrace(); 
 	       }
 	}
 }
