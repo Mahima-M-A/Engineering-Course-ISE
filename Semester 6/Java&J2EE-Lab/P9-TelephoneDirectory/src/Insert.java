@@ -41,12 +41,7 @@ public class Insert extends HttpServlet {
             stmt.executeUpdate("insert into tele_dir values('" + contact + "','" + name + "','" + address + "','" + company + "'," + pin + ");");
             
             out.println("The following contact details has been successfully updated");
-            out.println("<br>Name: "+name);
-            out.println("<br>Phone No.:"+contact);
-            out.println("<br>Address:"+address);
-            out.println("<br>Company:"+company);
-            out.println("<br>Pin code:"+pin);
-
+            out.println("<br>Name: "+name+"<br>Phone No.:"+contact+"<br>Address:"+address+"<br>Company:"+company+"<br>Pin code:"+pin);
         } catch (Exception e) {
             out.println("Error");
             e.printStackTrace();

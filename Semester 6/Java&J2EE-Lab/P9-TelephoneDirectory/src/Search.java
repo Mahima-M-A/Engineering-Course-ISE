@@ -47,17 +47,12 @@ public class Search extends HttpServlet {
                 e.printStackTrace(); 
             }
             if(rs.next()) {
-                String name = rs.getString(1);
-                String contact = rs.getString(2);
+                String contact = rs.getString(1);
+                String name = rs.getString(2);
                 String address = rs.getString(3);
                 String company = rs.getString(4);
-                int pin =rs.getInt(5);
-                out.println("Contact details");
-                out.println("<br>Name: "+name);
-                out.println("<br>Phone No.:"+contact);
-                out.println("<br>Address:"+address);
-                out.println("<br>Company:"+company);
-                out.println("<br>Pin code:"+pin);
+                int pin = rs.getInt(5);
+                out.println("Contact details:<br>Name: "+name+"<br>Phone No.:"+contact+"<br>Address:"+address+"<br>Company:"+company+"<br>Pin code:"+pin);
             } 
             else {
                 out.println("No contact found");
