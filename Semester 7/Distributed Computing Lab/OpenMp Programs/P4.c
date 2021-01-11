@@ -9,12 +9,11 @@ void main()
 	int n, i;
 
 	printf("Enter a number:\n");
-	scanf("%d", &a);
+	scanf("%d", &n);
 
 #pragma omp parallel for num_threads(4)
 	for (i = 2; i <= n; i++)
 	{
-		printf("%d\n", fact1);
 		fact1 *= i;
 	}
 
@@ -24,7 +23,6 @@ void main()
 #pragma omp parallel for firstprivate(fact2) num_threads(4)
 	for (i = 2; i <= n; i++)
 	{
-		printf("%d\n", fact2);
 		fact2 *= i;
 	}
 

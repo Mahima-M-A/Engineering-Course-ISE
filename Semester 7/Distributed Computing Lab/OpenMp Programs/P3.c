@@ -5,44 +5,32 @@
 #include<stdlib.h>
 #include<math.h>
 
-void prime_table(int n, int primeTable[])
-{
+void prime_table(int n, int primeTable[]) {
     int i, j, flag;
     int k = 0;
-    for(i = 2; k < n; i++)
-    {
+    for(i = 2; k < n; i++) {
         flag = 1;
-        for (j = 2; j < i; j++)
-        {
-            if ((i % j) == 0)
-            {
+        for (j = 2; j < i; j++) {
+            if ((i % j) == 0) {
                 flag = 0;
                 break;
             }
         }
-        if (flag)
-        {
+        if (flag) {
             primeTable[k++] = i;
         }
     }
 }
 
-void sine_table(int n, double sineTable[])
-{
+void sine_table(int n, double sineTable[]) {
     int i, j;
     double x, pi = 3.1415;
-    for (i = 0; i < n; i++)
-    {
-        sineTable[i] = 0.0;
-        for (j = 0; j <= i; j++)
-        {
-            x = (double)(j)*pi / (double)(n - 1);
-            sineTable[i] = sineTable[i] + sin(x);
-        }
+    for (i = 0; i < n; i++) {
+        sineTable[i] = sin(i*pi/180);
     }
 }
 
-void main() {
+int main() {
     int n, i, j;
     printf("Enter the table size: \n");
     scanf("%d", &n);
@@ -55,19 +43,20 @@ void main() {
 #pragma omp section
         {
             prime_table(n, primeTable);
-            printf("\nPrime Table:\n");
-            for (i = 0; i < n; i++) {
-                printf("%d ", primeTable[i]);
-            }
         }
         printf("\n");
 #pragma omp section
         {
             sine_table(n, sineTable);
-            printf("\nSine Table:\n");
-            for (j = 0; j < n; j++) {
-                printf("%lf ", sineTable[j]);
-            }
         }
     }
+	printf("\nPrime Table:\n");
+	for (i = 0; i < n; i++) {
+		printf("%d ", primeTable[i]);
+	}
+	printf("\nSine Table:\n");
+	for (j = 0; j < n; j++) {
+		printf("%lf ", sineTable[j]);
+	}
+	return 0;
 }
