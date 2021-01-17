@@ -1,0 +1,51 @@
+CustID,Age,Gender,Country,Employed,Income,ItemsPurchased(monthly),ProductType,PaymentType,Mode
+1,37,Male,USA,TRUE,,99,BabyCare,Cash,Offline
+2,44,, Russia,FALSE,463034,21,BabyCare,Bank Transfer,
+3,900,Female,India,TRUE,402865,31,Medical,UPI,Offline
+4,46,,USA,TRUE,,21,BabyCare,UPI,Offline
+5,19,Female,Australia,TRUE,221868,45,Medical,Bank Transfer,Online
+6,42,Male,USA,,228470,33,BabyCare,UPI,Offline
+7,,Male,Australia,FALSE,29784,6,Medical,Cash,Offline
+8,27,Male,Australia,FALSE,158538,,Electronic,UPI,Offline
+9,55,Male,Australia,TRUE,385202,57,,UPI,Offline
+10,24,Male,India,,293064,84,Groceries,Bank Transfer,Online
+11,200,,Australia,FALSE,206301,90,Accessories,Cash,Offline
+12,90,Male, China,FALSE,358283,84,Medical,Cash,Online
+13,45,Female,Australia,,461341,64,,UPI,Online
+14,68,Female,USA,FALSE,235572,30,Medical,Bank Transfer,Online
+15,,Female,India,TRUE,,45,BabyCare,,Offline
+16,,Male,India,FALSE,328618,,BabyCare,Cash,Online
+17,29,Male,India,TRUE,74807,23,Electronic,UPI,Online
+18,33,Male,,TRUE,409560,44,Groceries,UPI,Online
+19,46,Female, Russia,FALSE,175294,75,Groceries,UPI,Online
+20,43,,USA,FALSE,79986,43,,UPI,Offline
+21,96,Male, Russia,FALSE,477236,37,Medical,Cash,
+22,29,Male,,FALSE,293049,48,Medical,,Online
+23,86,Female, Russia,TRUE,176246,27,BabyCare,Bank Transfer,Offline
+24,,Male, China,FALSE,23581,68,Accessories,Bank Transfer,Offline
+25,37,Female,USA,TRUE,499067,57,Electronic,UPI,Online
+26,60,Female, China,FALSE,24112,46,BabyCare,UPI,Online
+27,,Male, China,TRUE,231433,90,Electronic,UPI,Offline
+28,53,Female, Russia,FALSE,252505,49,BabyCare,UPI,Online
+29,21,Male,,TRUE,116422,98,Medical,Cash,Online
+30,72,Male,Australia,TRUE,26818,,Groceries,Cash,Offline
+31,24,Male, Russia,TRUE,232903,26,Medical,Bank Transfer,Online
+32,39,Male,India,FALSE,487877,28,Accessories,UPI,Online
+33,79,Female,India,FALSE,338039,87,Medical,UPI,Offline
+34,94,Male,Australia,TRUE,322202,54,BabyCare,UPI,
+35,10,Male,USA,TRUE,222460,47,Medical,Cash,Online
+36,50,Male,India,FALSE,349472,59,Accessories,UPI,Offline
+37,76,,India,FALSE,54184,,Groceries,UPI,Online
+38,46,Female, Russia,FALSE,22147,55,BabyCare,Bank Transfer,Online
+39,67,Male,USA,FALSE,417965,70,Accessories,Cash,Online
+40,56,,India,TRUE,379663,58,,,Online
+41,33,,,FALSE,49768,3,Accessories,Bank Transfer,Offline
+42,72,Female, China,TRUE,14306,82,Electronic,Cash,Online
+43,60,Female, Russia,TRUE,,12,Medical,UPI,Offline
+44,5,Male,Australia,FALSE,232355,11,Accessories,UPI,Offline
+45,,Female,USA,TRUE,232456,47,Electronic,UPI,Online
+46,25,,Australia,FALSE,255897,37,Electronic,Bank Transfer,Online
+47,,Male, China,TRUE,345582,78,Accessories,UPI,Online
+48,91,Male, Russia,TRUE,222321,72,Electronic,Cash,Offline
+49,76,Female,Australia,TRUE,133605,14,Groceries,UPI,Online
+50,52,Female,USA,FALSE,213969,88,Accessories,Bank Transfer,
